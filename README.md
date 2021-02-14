@@ -30,7 +30,7 @@ nohup java -Xms256m -Xmx512m -jar server.jar nogui &
 ps -aux | grep server.jar
 ```
 
-你会得到类似如下的输出。其中，939141指的就是server.jar的进程号。
+你会得到类似如下的输出。其中，937141指的就是server.jar的进程号。
 
 ```bash
 root      937141 78.5 36.4 2655164 742112 pts/2  Sl   20:10   3:16 java -Xms256m -Xmx512m -jar server.jar nogui
