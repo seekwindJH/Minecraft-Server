@@ -1,5 +1,7 @@
 # 启动Minecraft JavaEdition Server
 
+> 资源的[GitHub链接](https://github.com/seekwindJH/Minecraft-Server)
+
 ## 1. 下载对应版本的server.jar
 
 从官方渠道或者第三方渠道下载对应的`server.jar`，放置在服务器主机内。需要注意的是，服务器主机需要有公网IP或者内网穿透，以便于客户端的访问。如果没有服务器，建议购买阿里云或腾讯云等云主机。如果有服务器，建议购买内网穿透服务。
@@ -28,16 +30,18 @@ nohup java -Xms256m -Xmx512m -jar server.jar nogui &
 ps -aux | grep server.jar
 ```
 
-你会得到类似如下的输出。其中，924153指的就是server.jar的进程号。
+你会得到类似如下的输出。其中，939141指的就是server.jar的进程号。
 
 ```bash
-root      924153  0.0  0.0   9036   664 pts/0    S+   19:49   0:00 grep --color=auto server.jar
+root      937141 78.5 36.4 2655164 742112 pts/2  Sl   20:10   3:16 java -Xms256m -Xmx512m -jar server.jar nogui
+root      939556  0.0  0.1   9036  2316 pts/2    S+   20:14   0:00 grep --color=auto server.jar
+
 ```
 
 然后，我们杀死该进程，就可以达到关闭服务的目的。
 
 ```bash
-kill 924153
+kill 937141
 ```
 
 ## 4. 关闭登入验证
